@@ -8,7 +8,7 @@ const MongoClient = require('mongodb').MongoClient
 MongoClient.connect('mongodb://crudman:crud@ds237947.mlab.com:37947/crud9999', (err, database) => {
   if (err) return console.log(err)
   db = database
-  app.listen(3000, function() {
+  app.listen(process.env.PORT || 3000, function() {
     console.log('listening on 3000')
   })
 })
